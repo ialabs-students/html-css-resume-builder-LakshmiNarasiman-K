@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Resume </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+            integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script>
+            function onDocLoad() {
+                var fdata = JSON.parse(window.localStorage.getItem("formDate"));
+                console.log(fdata);
+                 for (var key in fdata) {
+                     try{
+                        document.getElementById(key).innerHTML = fdata[key];
+                    }
+                    catch(e){
+                        console.log("errorwithfields "+key);
+                    }
+                     
+    
+                }
+                
+             }
+
+       </script>
+        <style>
+            .skill-item {
+                margin: 5px;
+                padding: 3px;
+                background-color: #3073e54a;
+                border-radius: 6px;
+            }
+            .container {
+                border: 1px solid rgba(128, 128, 128, 0.288);
+                border-radius: 10px;
+            }
+            .card-header, .card, .card-body, .card-footer {
+                border: none;
+            }
+            h4{
+                color:rgb(235, 27, 159);
+            }
+
+        </style>
+    </head>
+    <body onload="onDocLoad()">
+        <div class="container mt-3">
+        <div class="row">
+            
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header" >
+                        <img style="width:6cm"src="resumeimage.jpg">
+                    </div>
+                    <div class="card-body">
+                        <h3><span id="fname" name="fname"></span> <span id="mname" name="mname"></span> <span id="lname" name="lname"></span></h3>
+                    </div>
+                    <div class="card-footer">
+                        <h4 class="bg-light text-center">About me</h4>
+                        <hr class="bg-primary">
+                        <p><span id="description" name="description"></span></p>
+                    </div>
+                </div>
+                <div class="card">
+                    
+                    <div class="card-body">
+                        <h4 class="bg-light text-center">Skills</h4>
+                        <hr class="bg-dark">
+                        <div class="pt-2"><span class="skill-item" id="tech1" name="tech1"></span></div>
+                        <div class="pt-2"><span class="skill-item" id="tech2" name="tech2"></span></div>
+                        <div class="pt-2"><span class="skill-item" id="tech3" name="tech3"></span></div>
+                        <div class="pt-2"><span class="skill-item" id="tech4" name="tech4"></span></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="bg-primary text-center">Social Media</h4>
+                        <hr class="bg-dark">
+                        <h5>Facebook</h5><span class="text-dark-10s" id="fb" name="fb"></span>
+                        <h5>LinkedIn</h5><span class="text-dark-5" id="li" name="li"></span>
+                        <h5>Twitter</h5><span class="text-dark-5" id="tw" name="tw"></span>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9" >
+                <div class="row">
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Contact Information</h2>
+                        <p><i class="fa fa-phone">  <span id="number" name="number"></span></i></p>
+                        <p><i class="fa fa-envelope">  <span id="email" name="email"></span></i></p>
+                    </div>
+                </div>
+                <hr class="bg-primary">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="bg-light text-center">Certificates</h4>
+                        <hr class="bg-light">
+                        <p><span id="obj" name="obj"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div><h4 class="bg-light text-center">Educational Qualification</h4></div>
+                    <hr class="bg-primary">
+                    <table class="table table-info table-hover">
+                        <tr>
+                            <th> Education </th>
+                            <th> School/University</th>
+                            <th> Year of Passing </th>
+                            <th> Percentage/CGPA </th>
+                        </tr>
+                        <tr>
+                            <td> <label> Post Graduation: </label> </td>
+                            <td> <span id="u1" name="u1"></span> </td>
+                            <td> <span id="y1" name="y1"></span> </td>
+                            <td> <span id="p1" name="p1"></span> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Graduation: </label> </td>
+                            <td> <span id="u2" name="u2"></span> </td>
+                            <td> <span id="y2" name="y2"></span> </td>
+                            <td> <span id="p2" name="p2"></span> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Higher Secondary: </label> </td>
+                            <td> <span id="u3" name="u3"></span> </td>
+                            <td> <span id="y3" name="y3"></span> </td>
+                            <td> <span id="p3" name="p3"></span> </td>
+                        </tr>
+                        <tr>
+                            <td> <label> Secondary: </label> </td>
+                            <td> <span id="u4" name="u4"></span> </td>
+                            <td> <span id="y4" name="y4"></span> </td>
+                            <td> <span id="p4" name="p4"></span> </td>
+                        </tr>
+                    </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    <div><h4 class="bg-light text-center"> Experience</h4></div>
+                    <hr class="bg-primary">
+                    <table class="table table-warning">
+                        <thead>
+                            <tr>
+                                <th class="pl-2"> Organization </th>
+                                <th class="pl-2">Date Of Joining</th>
+                                <th class="pl-2">Date Of Releaving</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td class="pl-2"> <span id="organization1" name="organization1"></span> </td>
+                            <td class="pl-2"> <span id="doj1" type="date" name="doj1"></span> </td>
+                            <td class="pl-2"><span id="dor1" type="date" name="dor1"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="pl-2"> <span id="organization2" name="organization2"></span> </td>
+                            <td class="pl-2"> <span id="doj2" type="date" name="doj2"></span> </td>
+                            <td class="pl-2"><span id="dor2" type="date" name="dor2"></span></td>
+                        </tr>    
+                    </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div><h4 class="bg-light text-center">Project Experience</h4></div>
+                        <hr class="bg-primary">
+                        <div class="text-dark-20" id="pe" name="pe"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div><h4 class="bg-light text-center">Declaration</h4></div>
+                        <hr class="bg-primary">
+                        <div class="text-dark-20" id="declaration" name="declaration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

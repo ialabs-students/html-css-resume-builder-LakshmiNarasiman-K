@@ -9,16 +9,26 @@
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
             <style>
               body{
-                  background-color: rgb(102, 215, 73);
+                  background-color: #848f78;
               }
-              textfield{
-                background-color: rgb(188, 195, 208);
+              form{
+                background-color: lightblue;
               }
+            
               textarea{
                 background-color:aqua;
               }
               td{
                 color: rgb(124, 42, 42);
+              }
+              h1{
+                background-color: aquamarine;
+              }
+              a{
+                background-color: aqua;
+              }
+              input{
+                background-color: rgb(237, 206, 207);
               }
             </style>
             <script>
@@ -27,7 +37,7 @@
                  e.preventDefault();
                  var fdata = new FormData(document.getElementById("regForm"));
                  window.localStorage.setItem("formDate", JSON.stringify(Object.fromEntries(fdata)));
-                 window.location.href = "file:///C:/Users/narasiman.k/Desktop/New%20folder/sqltocsv/resume3.html";}
+                 window.location.href = "file:///C:/Users/narasiman.k/Desktop/New%20folder/sqltocsv/resume4.html";}
             </script>
     </head>
     <body >
@@ -47,19 +57,17 @@
                             <li data-target="#cid" data-slide-to="1"></li>
                             <li data-target="#cid" data-slide-to="2"></li>
                         </ul>
-            
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="rounded mx-auto d-block w-50" src="resumeimage.jpg">
+                                <img class="rounded mx-auto d-block w-50"style="height:300px" src="resumeimage.jpg">
                             </div>
                             <div class="carousel-item">
-                                <img class="rounded mx-auto d-block w-50" src="resumeimage1.jpg" >
+                                <img class="rounded mx-auto d-block w-50" style="height:300px"src="resumeimage1.jpg" >
                             </div>
                             <div class="carousel-item">
-                                <img class="rounded mx-auto d-block w-50"height="500px" src="resumeimage2.jpg" >
+                                <img class="rounded mx-auto d-block w-50"style="height:300px" src="resumeimage2.jpg" >
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 </div>
@@ -105,8 +113,6 @@
                 </div></div>
                 <div >
                     <label for="Eq">Educational Qualification:</label>
-                
-                        
                     <table width="1000" table class="from group col-md-12">
                         <thead>
                             <tr>
@@ -163,17 +169,54 @@
                             <td> <input id="dor2" type="date" name="dor2" placeholder="Enter Releaving Date"> </td>
                         </tr>
                     </table>
+                    <div>
+                    <table width="1000" table class="from group col-md-12">
+                        <thead>
+                            <tr>
+                                <th> Skills </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td> <input  id="tech1"type="text" name="tech1" placeholder="Enter Skill1"> </td>
+                            <td> <input id="tech2" type="text" name="tech2" placeholder="Enter Skill2"> </td>
+                            <td> <input id="tech3" type="text" name="tech3" placeholder="Enter Skill3"> </td>
+                            <td> <input id="tech4" type="text" name="tech4" placeholder="Enter Skill4"> </td>
+                        </tr>
+                        </table>
+                        </div>
                 </div>
+                <div class="row">
+                    <div class= "from-group col-md-4">
+                        <label for="name" >Facebook</label>
+                        <input id="fb" type="text"class="form-control" name="fb"  placeholder="Enter Facebook ID">
+                    </div>
+                    <div class= "from-group col-md-4">
+                        <label for="name">LinkedIn</label>
+                        <input id="li" type="text"class="form-control" name="li" placeholder="Enter LinkedIn ID">
+                    </div>
+                    <div class= "from-group col-md-4">
+                        <label for="name">Twitter</label>
+                        <input id="tw" type="text"class="form-control" name="tw" placeholder="Enter Twitter ID">
+                        </div>
+                    </div>
+                    <div class="p-1">
+                        <h5> <label for="Dl">About Me</label></h5>
+                        <textarea name="description" style=" width:75%; height:50px "placeholder="About yourself"></textarea>  
+                    </div>
                 <div class="p-1">
-                     <h5><label for="Dy">Describe Yourself</label></h5>
-                    <textarea name="dy" style=" width:75%; height:50px "placeholder="Enter you wishdom"></textarea>
+                    <h5><label for="Dy">Certificates</label></h5>
+                   <textarea name="obj" style=" width:75%; height:50px "placeholder="Enter your certificates"></textarea>
+               </div>
+                <div class="p-1">
+                     <h5><label for="Dy">Project Experience</label></h5>
+                    <textarea id="pe" name="pe" style=" width:75%; height:50px "placeholder="Enter your experience"></textarea>
                 </div>
                 <div class="p-1">
                     <h5> <label for="Dl">Declaration</label></h5>
-                    <textarea name="description" style=" width:75%; height:50px "placeholder="Enter you declaration"></textarea>
+                    <textarea name="declaration" style=" width:75%; height:50px "placeholder="Enter your declaration"></textarea>
                     
                 </div>
-                <div class= "from-group col-md-12">
+                <div class= "from-group col-ld-12">
                     <label for="image">Image</label>
                     <input id="image" type="file"class="form-control" name="image" placeholder="Choose File">
                 </div>
